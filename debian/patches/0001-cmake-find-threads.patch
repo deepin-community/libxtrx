@@ -1,0 +1,20 @@
+Linking pthreads.
+--- libxtrx-0.0.1+git20191219.98458ce.orig/CMakeLists.txt
++++ libxtrx-0.0.1+git20191219.98458ce/CMakeLists.txt
+@@ -72,6 +72,7 @@ if(CMAKE_COMPILER_IS_GNUCC)
+ 	add_definitions("-Wl,-z,defs")
+ endif(CMAKE_COMPILER_IS_GNUCC)
+ 
++find_package(Threads)
+ find_package(libxtrxdsp REQUIRED)
+ find_package(libxtrxll REQUIRED)
+ find_package(liblms7compact REQUIRED)
+@@ -90,7 +91,7 @@ add_library(xtrx SHARED
+ 	xtrx_fe_octocal0.c
+ 	octo/adf4355.c
+ 	)
+-target_link_libraries(xtrx ${LIBXTRXLL_LIBRARIES} ${LIBXTRXDSP_LIBRARIES} ${LIBLMS7COMPACT_LIBRARIES} m)
++target_link_libraries(xtrx Threads::Threads ${LIBXTRXLL_LIBRARIES} ${LIBXTRXDSP_LIBRARIES} ${LIBLMS7COMPACT_LIBRARIES} m)
+ 
+ set_target_properties(xtrx PROPERTIES VERSION ${LIBVER} SOVERSION ${MAJOR_VERSION})
+ 

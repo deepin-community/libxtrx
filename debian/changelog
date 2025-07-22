@@ -1,5 +1,31 @@
-template-repository (1.0-1) unstable; urgency=medium
+libxtrx (0.0.1+git20191219.98458ce-3) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Daniele Forsi ]
+  * Bump debhelper from old 12 to 13.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Update standards version to 4.6.0, no changes needed.
+
+  [ Christoph Berg ]
+  * B-D on pkgconf.
+  * Build against qcustomplot 2.1. (Closes: #1024100)
+
+ -- Christoph Berg <myon@debian.org>  Wed, 23 Nov 2022 11:32:34 +0100
+
+libxtrx (0.0.1+git20191219.98458ce-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Peter Michael Green ]
+  * Apply upstream patch for soapysdr 0.8 (Closes: #993699)
+  * Bump soapysdr build-dependency to 0.8
+  * Change all references to soapysdr in debian packaging from 0.7 to 0.8
+
+ -- Christoph Berg <myon@debian.org>  Tue, 11 Jan 2022 12:46:30 +0100
+
+libxtrx (0.0.1+git20191219.98458ce-1) unstable; urgency=medium
+
+  * Initial release (Closes: #945155)
+
+ -- Sepi Gair <sepigair@email.cz>  Tue, 17 Mar 2020 13:02:53 +0100
