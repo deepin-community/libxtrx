@@ -1,1 +1,2 @@
-# template-repository
+# libxtrx
+High level XTRX API

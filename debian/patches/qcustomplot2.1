@@ -1,0 +1,9 @@
+--- a/examples/xtrx_fft/CMakeLists.txt
++++ b/examples/xtrx_fft/CMakeLists.txt
+@@ -27,5 +27,5 @@ set(mainwindow_SRCS
+ include_directories(${LIBXTRX_INCLUDE_DIRS})
+ 
+ add_executable(xtrx_fft ${mainwindow_SRCS})
+-target_link_libraries(xtrx_fft Qt5::Widgets Qt5::PrintSupport ${QCustomPlot_LIBRARIES} ${LIBXTRX_LIBRARIES})
++target_link_libraries(xtrx_fft Qt5::Widgets Qt5::PrintSupport QCustomPlot::QCustomPlot ${LIBXTRX_LIBRARIES})
+ install(TARGETS xtrx_fft DESTINATION ${XTRX_UTILS_DIR})
